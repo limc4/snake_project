@@ -1,5 +1,5 @@
-"""Snake game - v2
-initialising the snake
+"""Snake game - v1.5
+allowing user to quit display screen
 created by Charlotte"""
 
 import pygame
@@ -29,19 +29,10 @@ score_font = pygame.font.SysFont("arialblack", 20)
 exit_font = pygame.font.SysFont("freesanbold.ttf", 30)
 
 quit_game = False
-
-# snake will be 20 x 20 pixels
-snake_x = 490  # centre point horizontally is (1000-20 snake width)/2 = 490
-snake_y = 350  # centre point vertically is (720-20 snake height)/2 = 350
-
 while not quit_game:  # loop to keep game running unless quit
     for event in pygame.event.get():  # receives all events from user inputs
         if event.type == pygame.QUIT:  # checks for 'quit' event
             quit_game = True
-
-    # create rectangle for snake
-    pygame.draw.rect(screen, red, [snake_x, snake_y, 20, 20])
-    pygame.display.update()
 
 pygame.quit()
 quit()
