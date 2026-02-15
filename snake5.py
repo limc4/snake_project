@@ -1,5 +1,5 @@
-"""Snake game - v4
-collision detection
+"""Snake game - v5
+displaying messages
 created by Charlotte"""
 
 import pygame
@@ -27,6 +27,18 @@ green = (72, 232, 94)
 # fonts for the game
 score_font = pygame.font.SysFont("arialblack", 20)
 exit_font = pygame.font.SysFont("freesanbold.ttf", 30)
+msg_font = pygame.font.SysFont("arialblack", 20)
+
+def message(msg, txt_colour):
+    """function displays messages"""
+    txt = msg_font.render(msg, True, txt_colour)
+
+    # centre rectangle: 1000/2 = 500 and 720/2 = 260
+    text_box = txt.get_rect(center=(500, 360))  # render method applied
+    # (True smoothes the edges of the font)
+
+    screen.blit(txt, text_box)  # draws one image into another
+    # .blit(displayed, image on which to display)
 
 clock = pygame.time.Clock()  # sets the speed at which the snake moves
 
@@ -72,8 +84,12 @@ while not quit_game:  # loop to keep game running unless quit
     pygame.draw.rect(screen, red, [snake_x, snake_y, 20, 20])
     pygame.display.update()
 
-    clock.tick(5)  # sets the speed at which each iteration of the game loop
+    clock.tick(7)  # sets the speed at which each iteration of the game loop
     # runs in frames per second (fps). In this case it is set to 5fps
+
+message("You died!", black)  # calls the message function
+pygame.display.update()  # updates the surface to include the rectangle
+time.sleep(3)  # message doesn't disappear immediately
 
 pygame.quit()
 quit()
