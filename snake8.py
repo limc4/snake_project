@@ -1,5 +1,5 @@
-"""Snake game - v7
-letting user quit or play again
+"""Snake game - v8
+modify quitting method
 created by Charlotte"""
 
 
