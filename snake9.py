@@ -1,5 +1,5 @@
-"""Snake game - v8
-modify quitting method
+"""Snake game - v9
+grow snake
 created by Charlotte"""
 
 
