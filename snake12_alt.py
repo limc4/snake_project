@@ -1,5 +1,5 @@
-"""Snake game - v12
-snake speed
+"""Snake game - v12 alt
+alternative score method
 created by Charlotte"""
 
 
