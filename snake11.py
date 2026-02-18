@@ -1,5 +1,5 @@
-"""Snake game - v10
-food sprite
+"""Snake game - v9
+grow snake
 created by Charlotte"""
 
 
